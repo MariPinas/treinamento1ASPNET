@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using treinamento1ASPNET.Context;
 using treinamento1ASPNET.Model;
-using treinamento1ASPNET.Context;
 
 namespace treinamento1ASPNET.Controller
 {
@@ -31,7 +30,7 @@ namespace treinamento1ASPNET.Controller
             _context.Add(product);
             _context.SaveChanges();
 
-            return Ok(product);
+            return CreatedAtAction(nameof(GetByID), new { id = product.Id }, product);
         }
 
         [HttpGet]
