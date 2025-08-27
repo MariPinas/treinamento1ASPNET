@@ -1,3 +1,4 @@
+<3 Treinando para a entrevista técnica
 ### TODO
 
 -> criar regras de negocio
